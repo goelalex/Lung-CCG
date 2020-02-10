@@ -1,0 +1,40 @@
+<PlanDefinition xmlns="http://hl7.org/fhir">
+   <identifier>
+      <system value="http://someIdentifier.com"></system>
+      <value value="LungDiagnosis_PD1"></value>
+   </identifier>
+   <name value="Lung Cancer 12 month followup"></name>
+   <title value="Lung Cancer 12 month followup"></title>
+   <type>
+      <coding>
+         <code value="workflow-definition"></code>
+      </coding>
+   </type>
+   <status value="active"></status>
+   <action>
+      <title value="Lung_Cancer_12_month_followup"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://radlex.org"></system>
+                  <code value="RID50136"></code>
+                  <display value="Lung-RADS 1"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="text/cql"></language>
+            <expression value="1. Check if there are existing low dose cts between today and 5 years prior to today
+2. If these are multiple, sort by ascending date 
+3. If the last date + 5 years &gt;= today's date then order low does ct 
+4. Do within one year of last chest ct "></expression>
+         </expression>
+      </condition>
+   </action>
+</PlanDefinition>

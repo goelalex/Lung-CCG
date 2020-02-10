@@ -1,0 +1,201 @@
+<PlanDefinition xmlns="http://hl7.org/fhir">
+   <identifier>
+      <system value="http://someIdentifier.com"></system>
+      <value value="LungDiagnosis_PD"></value>
+   </identifier>
+   <name value="LungCancerDiagnosis"></name>
+   <title value="Lung Cancer Diagnosis"></title>
+   <type>
+      <coding>
+         <code value="workflow-definition"></code>
+      </coding>
+   </type>
+   <status value="active"></status>
+   <action>
+      <title value="LDCT Lung"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="66857006"></code>
+                  <display value="Hemoptysis"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <expression value="START EXP TO BE FILLED IN"></expression>
+         </expression>
+      </condition>
+      <condition>
+         <kind value="stop"></kind>
+         <expression>
+            <expression value="STOP EXP TO BE FILLED IN"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="ActivityDefinition/LDCTLungActDef1"></definitionCanonical>
+   </action>
+   <action>
+      <title value="Lung Rads 1"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="16334891000119106"></code>
+                  <display value="Low dose computed tomography of chest without contrast (procedure)"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="application/x-fhir-query"></language>
+            <expression value="/Observation?subject:Patient/{id}/&amp;value-concept=http://radlex.org|RID50136"></expression>
+         </expression>
+      </condition>
+      <condition>
+         <kind value="stop"></kind>
+         <expression>
+            <language value="text/cql"></language>
+            <expression value="TO BE FILLED IN - 5 years of follow up"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="PlanDefinition/LungDiagnosis_PD1"></definitionCanonical>
+   </action>
+   <action>
+      <title value="Lung Rads 2"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="16334891000119106"></code>
+                  <display value="Low dose computed tomography of chest without contrast (procedure)"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="application/x-fhir-query"></language>
+            <expression value="/Observation?subject:Patient/{id}/&amp;value-concept=http://radlex.org|RID50137"></expression>
+         </expression>
+      </condition>
+      <condition>
+         <kind value="stop"></kind>
+         <expression>
+            <language value="text/cql"></language>
+            <expression value="TO BE FILLED IN - 5 years of follow up"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="PlanDefinition/LungDiagnosis_PD2"></definitionCanonical>
+   </action>
+   <action>
+      <title value="Lung Rads 3"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="16334891000119106"></code>
+                  <display value="Low dose computed tomography of chest without contrast (procedure)"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="application/x-fhir-query"></language>
+            <expression value="/Observation?subject:Patient/{id}/&amp;value-concept=http://radlex.org|RID50138"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="PlanDefinition/LungDiagnosis_PD3"></definitionCanonical>
+   </action>
+   <action>
+      <title value="Lung Rads 4A"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="16334891000119106"></code>
+                  <display value="Low dose computed tomography of chest without contrast (procedure)"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="application/x-fhir-query"></language>
+            <expression value="/Observation?subject:Patient/{id}/&amp;value-concept=http://radlex.org|RID50139"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="PlanDefinition/LungDiagnosis_PD4A"></definitionCanonical>
+   </action>
+   <action>
+      <title value="Lung Rads 4B"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="16334891000119106"></code>
+                  <display value="Low dose computed tomography of chest without contrast (procedure)"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="application/x-fhir-query"></language>
+            <expression value="/Observation?subject:Patient/{id}/&amp;value-concept=http://radlex.org|RID50140"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="PlanDefinition/LungDiagnosis_PD4B"></definitionCanonical>
+   </action>
+   <action>
+      <title value="Lung Rads 4X"></title>
+      <trigger>
+         <type value="data-added"></type>
+         <data>
+            <type value="Observation"></type>
+            <codeFilter>
+               <code>
+                  <system value="http://snomed.org"></system>
+                  <code value="16334891000119106"></code>
+                  <display value="Low dose computed tomography of chest without contrast (procedure)"></display>
+               </code>
+            </codeFilter>
+         </data>
+      </trigger>
+      <condition>
+         <kind value="start"></kind>
+         <expression>
+            <language value="application/x-fhir-query"></language>
+            <expression value="/Observation?subject:Patient/{id}/&amp;value-concept=http://radlex.org|RID50141"></expression>
+         </expression>
+      </condition>
+      <definitionCanonical value="PlanDefinition/LungDiagnosis_PD4X"></definitionCanonical>
+   </action>
+</PlanDefinition>
