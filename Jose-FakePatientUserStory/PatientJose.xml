@@ -13,9 +13,7 @@
         <family value="Rodriguez"></family>
         <given value="Jose"></given>
     </name>
-    <birthDate>
-        <value value="1954-06-15"/>
-    </birthDate>
+    <birthDate value="1954-06-15"></birthDate>
     <gender value="male"></gender>
 </Patient>
 
