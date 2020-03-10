@@ -1,0 +1,22 @@
+<ServiceRequest xmlns="http://hl7.org/fhir">
+   <status value="active"/> 
+  <intent value="original-order"/> 
+  <code> 
+    <coding> 
+      <system value="http://snomed.org/"/> 
+      <code value="16334891000119106"/> 
+    </coding> 
+    <text value="Low dose computed tomography of chest without contrast (procedure)"/> 
+  </code> 
+  <subject> 
+    <reference value="Patient/6754"/> 
+  </subject> 
+  <occurrenceDateTime value="2020-05-08T09:33:27+07:00"/> 
+  <requester> 
+      <reference value="Practitioner/familypract1"/> 
+      <display value="Dr. Kiki Bambrick"/> 
+  </requester> 
+  <reasonCode> 
+    <text value="Check for metastatic disease"/> 
+  </reasonCode> 
+</ServiceRequest> 
