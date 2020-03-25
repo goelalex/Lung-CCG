@@ -97,7 +97,7 @@
          <kind value="stop"></kind>
          <expression>
             <language value="text/cql"></language>
-            <expression value="TO BE FILLED IN - 5 years of follow up"></expression>
+            <expression value="Low Dose Chest CT Within 5 Years"></expression>
          </expression>
       </condition>
       <definitionCanonical value="PlanDefinition/LungDiagnosis_PD2"></definitionCanonical>
