@@ -22,6 +22,7 @@
                   <system value="http://snomed.org"></system>
                   <code value="66857006"></code>
                   <display value="Hemoptysis"></display>
+                  <!-- what happens if you have a derivative of the Hemoptysis code?-->
                </code>
             </codeFilter>
          </data>
